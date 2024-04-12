@@ -1,0 +1,16 @@
+body {
+	font-family:Courier New;
+	background-color:#FAF9F6;
+	color:#D2042D;
+}
+
+button {
+	background-color:#D2042D;
+	color:#FAF9F6;	
+	width:80px;
+	height:30px;
+}
+
+input {
+	height:30px;
+}

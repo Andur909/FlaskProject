@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>RNG</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+	</head>
+	<body>
+		<form method="POST">
+			<label>Low Number</label>
+			<input type="Number" name="txtnumlow"><br>
+			<label>High Number</label>
+			<input type="Number" name="txtnumhigh"><br>
+			<button name="submit">Submit</button><br><br>
+			<p>{{high}}</p>
+			<button id="btnback" name="back" value="home">Home</button>
+		</form>
+	</body>
+</html>

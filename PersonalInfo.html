@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Personal Info</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+	</head>
+	<body>
+		<h1>Personal Interest Inout</h1>
+		<form method="POST">
+		<label>Name: </label>
+		<input type="text" name="txtname"><br>
+		<label>Address: </label>
+		<input type="text" name="txtaddress"><br>
+		<label>Occupation: </label>
+		<input type="text" name="txtoccupation"><br>
+		<label>Birthplace :</label>
+		<input type="text" name="txtbirthplace"><br>
+		<label>DOB: </label>
+		<input type="text" name="txtdob"><br>
+		<label>Fav Color</label>
+		<input type="text" name="txtcolor"><br>
+		<button name="btn" value="SUBMIT">Submit</button><br>
+		<button id="btnback" name="btn" value="home">Home</button>
+		</form>
+	</body>
+</html>

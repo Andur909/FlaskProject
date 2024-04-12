@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+</head>
+<body>
+    <h1>Calculator</h1><br><br>
+    <form method="post">
+    <table>
+        <input readonly type="text" id="display" name="display" value="{{ display }}"></input><br><br>
+        <button id="btn7" name="calc" value="7">7</button>
+        <button id="btn8" name="calc" value="8">8</button>
+        <button id="btn9" name="calc" value="9">9</button>
+        <button id="divide" name="calc" value="/">/</button><br>
+        <button id="btn4" name="calc" value="4">4</button>
+        <button id="btn5" name="calc" value="5">5</button>
+        <button id="btn6" name="calc" value="6">6</button>
+        <button id="multiply" name="calc" value="*">x</button><br>
+        <button id="btn1" name="calc" value="1">1</button>
+        <button id="btn2" name="calc" value="2">2</button>
+        <button id="btn3" name="calc" value="3">3</button>
+        <button id="subtract" name="calc" value="-">-</button><br>
+        <button id="btn0" name="calc" value="0">0</button>
+        <button id="period" name="calc" value="period">.</button>
+        <button id="negative" name="calc" value="swap">+-</button>
+        <button id="add" name="calc" value="+">+</button><br>
+        <button id="sine" name="calc" value="sin">sin</button>
+        <button id="cosine" name="calc" value="cos">cos</button>
+        <button id="tangent" name="calc" value="tan">tan</button>
+        <button id="clear" name="calc" value="clear">Clear</button><br>
+        <button id="enter" name="calc" style="width:22.3%;" value="=">=</button><br>
+        {% if prev_number %}
+            <label>Prev. Number</label>
+            <input readonly type="text" id="prev_number" name="prev_number" value="{{ prev_number }}">
+        {% endif %}
+        {% if prev_operation %}
+            <label>Prev. Operation</label>
+            <input readonly type="text" id="prev_operation" name="prev_operation" value="{{ prev_operation }}">
+        {% endif %}
+        <p>If the display is NaN, refresh the page or press Clear</p>
+    </table>
+
+    <h2>Density</h2>
+    <label>Mass</label>
+    <input type="text" name="mass"></input><br>
+    <label>Volume</label>
+    <input type="text" name="volume"></input><br>
+    <button name="calc" value="subm_dens">Submit Density</button>
+    <label>{{ density }}</label>
+
+    <h2>Interest (Compounded per year)</h2>
+    <label>Principal Amount</label>
+    <input type="text" name="principal"></input><br>
+    <label>Interest Rate</label>
+    <input type="text" name="rate"></input><br>
+    <label>Type of Time</label>
+    <select name="timetype">
+        <option value="365">Days</option>
+        <option value="52">Weeks</option>
+        <option value="12">Months</option>
+        <option value="1">Years</option>
+    </select><br>
+    <label>How many?</label>
+    <input type="text" name="time"></input><br>
+    <button name="calc" value="subm.int">Submit Interest</button>
+    <label>{{ finalprice }}</label><br><br><br>
+
+     <button style="width:150px;" name="calc" value="home">Home Page</button>
+    </form>
+</body>
+</html>
